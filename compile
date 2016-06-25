@@ -1,5 +1,6 @@
 cd latex
-pdflatex main.tex
-pdflatex main.tex
+pdflatex -interaction=nonstopmode main.tex
+pdflatex -interaction=nonstopmode main.tex
 cd ..
+rm book.pdf
 mv latex/main.pdf book.pdf
