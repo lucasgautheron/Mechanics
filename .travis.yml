@@ -6,7 +6,10 @@ addons:
   apt:
     packages:
     - texlive-latex-extra
-    - texlive-full
+    - texlive-fonts-recommended 
+    - texlive-fonts-extra
+    - texlive-latex-recommended
+    - dvipng
 
 before_install:
  - chmod +x compile
