@@ -1,18 +1,8 @@
-sudo: false
-
-cache: apt
-
-addons:
-  apt:
-    packages:
-    - texlive-latex-extra
-    - texlive-fonts-recommended 
-    - texlive-fonts-extra
-    - texlive-latex-recommended
-    - dvipng
+sudo: required
 
 before_install:
- - chmod +x compile
+ - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+ - "chmod +x compile"
 
 script: ./compile
 
