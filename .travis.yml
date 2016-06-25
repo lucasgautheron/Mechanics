@@ -1,0 +1,22 @@
+sudo: false
+
+cache: apt
+
+addons:
+  apt:
+    packages:
+    - texlive-latex-extra
+
+before_install:
+ - chmod +x compile
+
+script: ./compile
+
+notifications:
+  email:
+    recipients:
+      - lucas.gautheron@gmail.com
+      - lucas@sciencestechniques.fr
+    on_success: change # default: change
+    on_failure: always
+

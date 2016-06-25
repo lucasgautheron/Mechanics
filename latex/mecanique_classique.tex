@@ -1,0 +1,286 @@
+\section{La relativité galiléenne}
+Pour écrire les principes qui régissent la mécanique newtonienne, nous nous intéresserons à la dynamique de points matériels, c'est-à-dire d'objets dont l'étendue est nulle. Il peut sembler qu'aucun objet en apparence, à part les particules fondamentales ponctuelles telles que l'électron par exemple, qui ont d'ailleurs été découvertes bien après les travaux de Newton, ne se conforme à une telle définition. Pourtant, nous verrons que si nous acceptons cette idéalisation mathématique, nous ne perdrons pas de généralité, et nous obtiendrons des résultats pour des objets de dimension quelconque. Supposons cependant que nous ne travaillons qu'avec d'hypothétique particules minuscules pour commencer.
+
+\subsection{Référentiel}
+
+Un référentiel est l'association d'un repère et d'un objet de référence arbitraire fixant son origine. Ainsi, à tout corps de l'univers et à chaque instant $t$, nous pouvons donc associer un vecteur position $\vec{r}(t) = (x(t), y(t), z(t))$ caractérisant sa position relative avec cette référence, où $x$, $y$ et $z$ désignent les coordonnées cartésiennes.
+
+On peut alors définir la vitesse $\vec{v}$ d'un corps dans un référentiel $\mathcal{R}$ comme la dérivée de ce vecteur position :
+\begin{equation}
+\vec{v}_{\mathcal{R}} = \dfrac{\dd \vec{r}}{\dd t}
+\end{equation}
+
+Un corps est dit immobile dans un réferentiel si sa vitesse y est nulle.
+On dira qu'un corps observe un mouvement rectiligne si $\vec{v}$ est de direction fixe, et on parlera de mouvement uniforme si $\vec{v}$ est de norme constante.
+
+\subsection{Transformation de Galilée}
+
+On suppose que pour tout temps $t$, on peut définir de façon univoque l'état $\Omega (t)$ de l'univers à cet instant par la position relative de tous les corps qui le composent, et que la distance entre deux corps quelconques de l'univers est la même dans tout référentiel.
+
+Soit $\mathcal{R}$ un référentiel muni d'un repère cartésien orthonormé d'axes $\vec{e_1}$,  $\vec{e_2}$ et $\vec{e_3}$ et soit de plus un corps en mouvement à la vitesse $\vec{V} = (V_1, V_2, V_3)$ fonction quelconque du temps dans ce référentiel, occupant l'origine à l'instant $t = 0$. On note $\mathcal{R}'$ le référentiel de même système d'axes associé à ce corps. Alors, d'après nos hypothèses, si l'on désigne par $\vec{r} = (x_1, x_2, x_3)$ les coordonnées d'un point quelconque dans $\mathcal{R}$ et par $\vec{r'} = (x_1', x_2', x_3')$ ses coordonnées dans $\mathcal{R}'$, la transformation qui les relie doit avoir la forme :
+
+\begin{equation}
+\dd x_i'(t) = \dd x_i(t) -  V_i(t) \dd t \textrm{ pour } i \in \{1, 2, 3\}
+\end{equation}
+
+Soit, en notation intégrale :
+
+\begin{equation}
+x_i'(t) = x_i(t) - \dint_{0}^{t} V_i(\tilde{t}) \dd \tilde{t} \textrm{ pour } i \in \{1, 2, 3\}
+\end{equation}
+
+Et sous forme vectorielle :
+
+\begin{equation}
+\vec{r'}(t) = \vec{r}(t) - \dint_{0}^{t} \vec{V}(\tilde{t}) \dd \tilde{t}
+\end{equation}
+
+D'où l'on en déduit la loi galiléenne de composition des vitesses :
+
+\begin{equation}
+\vec{v}_{\mathcal{R'}}(t) = \frac{\dd \vec{r'}}{\dd t}(t) = \vec{v}_{\mathcal{R}}(t) - \vec{V}(t)
+\end{equation}
+
+Si en particulier, $\mathcal{R}'$ est en mouvement rectiligne uniforme dans $\mathcal{R}$ ($\vec{V} = \vec{cste}$), alors :
+\begin{align}
+\vec{r'}(t) = \vec{r}(t) - \vec{V} t \\
+\vec{v}_{\mathcal{R'}}(t) = \vec{v}_{\mathcal{R}}(t) - \vec{V}
+\end{align}
+
+\subsection{Référentiels galiléens}
+
+Un référentiel galiléen est un référentiel dans lequel tout objet libre, c'est-à-dire n'interragissant pas avec les autres, conserve un mouvement rectiligne uniforme. Remarquons que la relation \og $\mathcal{R}'$ est en mouvement rectiligne uniforme par rapport à $\mathcal{R}$ \fg est une relation d'équivalence\footnote{Une relation d'équivalence est une relation binaire réflexive, transitive et symétrique.} sur tous les réferentiels. Alors, il découle de la loi de composition des vitesses que l'ensemble des référentiels galiléens est la classe d'équivalence\footnote{La classe d'équivalence d'un élement appartenant à un ensemble muni d'une relation d'équivalence est le sous-ensemble des éléments en relation avec lui.} de n'importe lequel de ces référentiels.
+En d'autres mots, un référentiel est galiléen si et seulement si il observe un mouvement rectiligne et uniforme par rapport à un autre référentiel galiléen.
+
+
+\section{Lois de la dynamique}
+
+\subsection{Principe de moindre action}
+
+On admet toujours comme principe la relativité galiléenne et le postulat d'existence des référentiels galiléens. 
+On suppose de plus que le mouvement de tout système de points matériel respecte un principe de moindre action, c'est-à-dire que le chemin emprunté par un système rend stationnaire une grandeur $S$, appelée \textit{action}.
+On admet enfin que cette action s'écrit, entre deux instants $t_1$ et $t_2$ :
+
+\begin{equation}
+S[q_1, .., q_n, \dot{q_1}, .., \dot{q_n}]_{t_1,t_2} = \dint_{t_1}^{t_2} \mathcal{L}(q_1(t), .., q_n(t), \dot{q_1}(t), .., \dot{q_n} (t), t) \dd t
+\end{equation}
+
+Les $q_i$ et $\dot{q_i}$, inconnues du problème, sont respectivement les coordonnées et vitesses généralisées décrivant de façon univoque l'état du système à chaque instant. Ce sont des fonctions réelles du temps. Dans le cas du mouvement d'un point matériel à trois degrés de liberté, $n = 3$.
+
+La fonction $\mathcal{L}$ est appelé \textit{Lagrangien}. Elle contient toute l'information sur les propriétés du système et les interactions qui interviennent.
+
+Ainsi, les coordonnées généralisées doivent être telles qu'un variation du première ordre du chemin pris n’entraîne pas de variation au premier ordre de l'action.
+
+\section{Équations du mouvement}
+
+Une fois les hypothèses faites, il est temps d'en déduire leurs implications. Ici, le but est de comprendre comment les équations du mouvement découlent du principe de moindre action, grâce à l'analyse fonctionnelle.
+
+On considère un système de lagrangien $\mathcal{L}$ évoluant entre deux instants consécutifs $t_1$ et $t_2$. Soient $\vec{q} = (q_i)$  et $\dot{\vec{q}} = (\dot{q}_i)$ ses coordonnées et vitesses généralisées, solutions du problèmes. Ces coordonnées doivent donc rendre l'action stationnaire. Soient $\vec{\eta} = (\eta_i)$ des fonctions $\mathcal{C}^1$ du temps décrivant un écart au chemin suivi par le système, et nul aux extrémités, c'est-à-dire $\vec{\eta}(t_1) = \vec{\eta}(t_2) = \vec{0}$.
+
+On souhaite alors que lorsque cet écart tend vers zéro, il n'entraine pas de variation de l'action au premier ordre (uniquement au second). Autrement dit, il faut $\delta S (\epsilon) \stackrel{\epsilon \to 0}{=} \mathcal{O}(\epsilon^2)$, avec $\delta S$ défini pour $\epsilon > 0$ par :
+
+\begin{equation}
+\begin{split}
+\delta S(\epsilon) & = S[\vec{q}+\epsilon \vec{\eta}]_{t_1,t_2} - S[q]_{t_1,t_2}\\
+ & = \dint_{t_1}^{t_2} \left [  \mathcal{L}(\vec{q}(t) + \epsilon\vec{\eta}(t),  \dot{\vec{q}}(t) +  \epsilon\dot{\vec{\eta}}(t), t) - \mathcal{L}(\vec{q}(t),  \dot{\vec{q}}(t), t) \right ] \dd t \\
+\end{split}
+\end{equation}
+
+Ainsi, lorsque l'écart tend vers 0 :
+
+\begin{equation}
+\begin{split}
+\delta S(\epsilon) & \stackrel{\epsilon \to 0}{=} \dint_{t_1}^{t_2} \left [ \mathcal{O}(\epsilon^2) + \dsum_{i=0}^{n} \dfrac{\partial \mathcal{L}}{\partial q_i} \epsilon \eta_i + \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \epsilon \dot{\eta}_i \right ] \dd t \\
+& \stackrel{\epsilon \to 0}{=} \mathcal{O}(\epsilon^2) +  \epsilon  \dint_{t_1}^{t_2} \left [ \dsum_{i=0}^{n} \dfrac{\partial \mathcal{L}}{\partial q_i} \eta_i + \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}}  \dot{\eta}_i  \right ] \dd t
+\end{split}
+\end{equation}
+
+De là, il est nécessaire que :
+
+\begin{equation}
+ \dint_{t_1}^{t_2} \left [ \dsum_{i=0}^{n} \dfrac{\partial \mathcal{L}}{\partial q_i} \eta_i + \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}}  \dot{\eta}_i  \right ] \dd t = 0
+\end{equation}
+
+Donc, en intégrant par parties :
+
+\begin{equation}
+ \dint_{t_1}^{t_2} \dsum_{i=0}^{n} \dfrac{\partial \mathcal{L}}{\partial q_i} \eta_i \dd t + \left [ \dsum_{i=0}^{n} \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}}  \eta_i \right ]_{t_1}^{t_2} -  \dint_{t_1}^{t_2} \dsum_{i=0}^{n} \dfrac{\dd}{\dd t} \left ( \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) \eta_i  \dd t = 0
+\end{equation}
+
+Mais $\eta_i(t_1) = \eta_i (t_2) = 0$ pour tout $i$, et donc :
+
+\begin{equation}
+\dsum_{i=0}^{n}  \dint_{t_1}^{t_2}  \left [  \dfrac{\partial \mathcal{L}}{\partial q_i} \eta_i - \dfrac{\dd}{\dd t} \left ( \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) \eta_i  \right ] \dd t = 0 \label{eq:lagrange_somme}
+\end{equation}
+
+Les différentes composantes $\eta_i$ étant indépendantes, cela est équivalent à :
+\footnote{En effet : soit $i$ entre $1$ et $n$. L'égalité étant vraie pour tout écart $\vec{\eta}$, elle est vraie pour $\vec{\xi}$ tel que $\xi_{j \neq i} = \eta_j$ et $\xi_i = -\eta_i$. En soustrayant alors l'équation \eqref{eq:lagrange_somme} pour $\eta$ et $\xi$, on trouve en particulier :  $\dint_{t_1}^{t_2}  \left [  \dfrac{\partial \mathcal{L}}{\partial q_i}\eta_i  - \left ( \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}}  \right ) \eta_i \right ] \dd t = 0$. On peut donc étendre l'égalité indépendamment à toute coordonnée. }
+
+\begin{equation}
+  \dint_{t_1}^{t_2}  \left [  \dfrac{\partial \mathcal{L}}{\partial q_i} - \dfrac{\dd}{\dd t} \left ( \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) \right ] \eta_i \dd t = 0 \textrm{ pour } 1\leq i \leq n
+\end{equation}
+
+Ceci étant vrai pour tout $\vec{\eta}$, alors en supposant simplement $\mathcal{L}$ de classe $\mathcal{C}^1$, et en vertu du lemme fondamental du calcul des variations :\footnote{En effet, si $f$ vérifie que, pour $a < b$ et toute fonction $\eta$ continue telle que $\eta(a) = \eta(b) = 0$  : $\int_a^b f(t)\eta(t) \dd t = 0$, alors pour $\eta(t) = (a-t)(t - b)f(t)$, $\int_a^b (a-t)(t-b)f^2(t)\dd t = 0$. L'intégrale est nulle et l'intégrande est positive donc nulle presque partout sur $[a,b]$. Mais $f$ est continue donc $f_{[a,b]} = 0$.}
+
+\begin{equation}
+  \dfrac{\partial \mathcal{L}}{\partial q_i} = \dfrac{\dd}{\dd t} \left ( \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) \textrm{ pour } 1\leq i \leq n
+\end{equation}
+
+Ce sont les équations du mouvement. Elles sont équivalentes à la formulation initiale du principe de moindre action.
+
+\section{Trouver le Lagrangien}
+
+Dans la formulation Newtonienne, les interactions modifiant le système étaient décrites par les forces. Après avoir établi le lien entre le mouvement et les forces, il fallait donc \og deviner \fg leurs expressions. Ici, le même problème est posé. Cette fois-ci, il faut trouver le Lagrangien : c'est lui qui contient l'information sur les interactions présentes. Cela peut paraitre plus complexe \textit{a priori}, parce que le lien entre mouvement et lagrangien est plus subtil que celui entre mouvement et forces. Mais nous verrons que ce nouveau formalisme facilite les choses dans bien des cas.
+
+\subsection{Degrés de liberté du Lagrangien}
+
+Nous avons défini le Lagrangien comme une fonction vérifiant certains critères et nous avons supposé qu'il existait toujours. Cependant, nous n'avons pas affirmé qu'il était unique à chaque système. Et pour cause : pour chaque problème, il en existe une infinité ! Si un Lagrangien  $\mathcal{L}_0$ convient, alors pour toute constante $\lambda$, $\lambda \mathcal{L}_0$ est aussi un Lagrangien du système (il conduit aux mêmes équations du mouvement). 
+En outre, toute combinaison linéaire de lagrangien d'un système demeure un lagrangien possible.
+
+ Ce n'est pas tout : pour $f = \left ((\vec{q}, t) \mapsto f((\vec{q}(t), t) \right )$, alors $\mathcal{L} = \mathcal{L}_0 + \dfrac{\dd f}{\dd t}$ est aussi un lagrangien du système. En effet, conformément aux notations précédentes, nous aurions :
+
+\begin{equation}
+\begin{split}
+\delta S (\epsilon) & = \delta S_0 (\epsilon ) + \epsilon \dint_{t_1}^{t_2} \left [ \dsum_{i=0}^{n} \dfrac{\partial  \dfrac{\dd f}{\dd t}}{\partial q_i} \eta_i \right ] \dd t + \mathcal{O}(\epsilon^2) \\
+&= \delta S_0(\epsilon) + \epsilon \left [ \dsum_{i=0}^{n} \dfrac{\partial  f}{\partial q_i} \eta_i \right ]_{t_1}^{t_2} + \mathcal{O}(\epsilon^2) \\
+&= \delta S_0 (\epsilon ) + \mathcal{O}(\epsilon^2)
+\end{split}
+\end{equation}
+
+Donc, à l'ordre 1 en $\epsilon$, les variations de l'action sont identiques, et $\mathcal{L}$ et $\mathcal{L}_0$ conduisent aux mêmes équations du mouvement s'il ne diffèrent que de la dérivée temporelle d'une fonction des coordonnées et du temps.
+
+\subsection{Systèmes et sous-systèmes}
+
+
+\subsection{Lagrangien d'une particule libre}
+
+Déterminer le lagrangien d'une particule libre, bien qu'il corresponde à un cas trivial, présente tout de même un intérêt : cela permet de mieux appréhender les raisonnements en mécanique analytique.
+Une particule libre n'interagit avec rien, et pour elle son milieu environnant est invariablement le vide. De là, son Lagrangien ne peut dépendre explicitement ni de sa position, ni du temps.
+D'autre part, dans le vide, aucune direction n'est privilégiée. Donc le lagrangien ne peut dépendre que de la norme de la vitesse $v$ de la particule. On écrira :
+\begin{equation}
+\mathcal{L}(\vec{r}, \vec{v}, t) = f(v^2)
+\end{equation}
+
+
+\section{Lois de conservation}
+
+%\subsection{Invariance par translation dans le temps et énergie}
+%
+%Supposons que nous comparons deux expériences menées dans des conditions tout à fait identique (même lagrangien, même conditions initiales), mais à des temps séparés d'une quantité $\delta t$, arbitrairement petite. Si le système est invariant par translation dans le temps, alors nous devrions obtenir les mêmes solution dans chaque cas. Nous devons donc obtenir les mêmes équations du mouvement, et les mêmes chemins doivent rendrent l'action stationnaire. 
+%
+%\begin{equation}
+%\begin{split}
+%\delta S (\epsilon) & = \delta S_0 (\epsilon ) + \epsilon \dint_{t_1}^{t_2} \left [ \dfrac{\dd \mathcal{L}(\vec{\eta}, \dot{\vec{\eta}}, t)}{\dd t} \right ] \delta t \dd t + \mathcal{O}(\epsilon^2) + \epsilon \mathcal{O}(\delta t^2)\\
+%&= a
+%\end{split}
+%\end{equation}
+%
+%\begin{equation}
+%\dfrac{\dd \mathcal{L}}{\dd t} = \dfrac{\partial \mathcal{L}}{\partial t} + \dfrac{\dd}{\dd t} \left ( \dot{q} \dfrac{\partial \mathcal{L}}{\partial \dot{q}} \right )
+%\end{equation}
+
+\subsection{Energie}
+
+Quel est le lien entre le Lagrangien et l'énergie du système ? Remarquons que le lagrangien est homogène à une énergie, mais ce n'est pas \textit{exactement} celle-ci. Si nous étudions la dérivée du lagrangien par rapport au temps, peut être pouvons nous exhiber une grandeur qui est conservée lorsque l'énergie est conservée. 
+
+\begin{equation}
+\dfrac{\dd \mathcal{L}}{\dd t} = \sum_{i=1}^{N}\dfrac{\partial \mathcal{L}}{\partial q_i} \dot{q_i} + \dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \ddot{q_i} + \dfrac{\partial \mathcal{L}}{\partial t}
+\end{equation}
+
+Puisque l'on s'intéresse aux solutions physique, les $(q_i)$ sont solutions des équations du mouvement et on peut écrire, en multipliant celles-ci par $\dot{q_i}$ :
+
+\begin{equation}
+\sum_{i=1}^{N}\dot{q_i} \dfrac{\partial \mathcal{L}}{\partial q_i} = \sum_{i=1}^{N} \dot{q_i}\dfrac{\dd}{\dd t} \left (\dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right )
+\end{equation}
+% NOTE: q(t) pas solution : énergie ? notion de particule virtuelle
+
+Cette équation peut donc être ajoutée à la précédente et on obtient :
+
+\begin{equation}
+\dfrac{\dd \mathcal{L}}{\dd t} = \sum_{i=1}^{N}  \dfrac{\dd}{\dd t} \left (\dot{q_i}\dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) + \dfrac{\partial \mathcal{L}}{\partial t}
+\end{equation}
+
+Et donc finalement :
+
+\begin{equation}
+ \dfrac{\dd}{\dd t} \left [  \sum_{i=1}^{N}  \left (\dot{q_i}\dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) - \mathcal{L} \right ] = - \dfrac{\partial \mathcal{L}}{\partial t}
+\end{equation}
+
+Nous avons écrit l'équation sous cette forme pour la raison suivante. Si $\mathcal{L} = \dfrac{1}{2}m\dot{x}^2 - U(x)$, c'est-à-dire si nous étudions le mouvement d'une particule dans un champ conservatif, alors le terme dans la dérivée devient égal à $ \dfrac{1}{2}m\dot{x}^2 + U(x)$, c'est-à-dire exactement l'énergie $E$ de la particule ! Il apparait que l'énergie s'obtient à partir du Lagrangien par la relation :
+
+\begin{equation}
+E =  \sum_{i=1}^{N}  \left (\dot{q_i}\dfrac{\partial \mathcal{L}}{\partial \dot{q_i}} \right ) - \mathcal{L}
+\end{equation}
+
+Notons que la dérivée de l'énergie est égale à l'opposée de la dérivée partielle du Lagrangien par rapport au temps. De là on peut tirer la conclusion suivante : un système est conservatif si et seulement si son Lagrangien ne dépend pas explicitement du temps. C'est un résultat très important : pour la première fois nous abordons une idée récurrente en physique selon laquelle une invariance (ici par rapport au temps) se traduit par une loi de conservation.
+
+\subsection{Quantité de mouvement}
+
+
+
+\subsection{Liens entre les différentes interprétations}
+
+Souvent, les lois de conservations sont envisagées de telle façon que le lien avec des invariances n'est pas évident.
+
+Prenons le cas de l'énergie. Une façon courante d'exprimer la conservation de l'énergie est de dire que si nous sommons toutes les formes d'énergie du système - cinétique, potentiels divers - nous devons toujours trouver la même chose.
+Si jamais il s'avérait que nous en trouvions moins que ce que nous devrions, nous savons, puisqu'elle doit être conservée, que nous en avons \og oubliée \fg, mais que si nous cherchons bien, nous devrions savoir ce qu'elle est devenue. Autrement dit, on peut toujours trouver un système plus grand que celui que nous avons d'abord considéré, dans lequel l'énergie est cette fois conservée. Quel est le lien avec l'invariance par translation dans le temps ? Imaginons que nous réalisons une expérience à partir d'un instant $t_0$ donné, et que nous notions son évolution. Si nous reproduisons cette expérience à un instant différent $t_1$, avec des conditions initiales identiques, le résultat sera-t-il le même ?  Si nous trouvons que le système évolue différemment quand l'expérience commence à un instant différent, cela signifie qu'il n'est pas invariant dans le temps. Formellement, nous exprimions cela par $\partial_t \mathcal{L} \neq 0$. Puisque nous avons reproduit l'expérience à l'\textit{identique}, simplement en la translatant dans le temps, alors il existe un paramètre extérieur agissant sur le système. Par exemple, un champ pourrait osciller autour, ou une planète massive extérieure pourrait exercer une certaine attraction variable au cours du temps. Si nous incluons ce paramètre \textit{dans} le système, alors il se peut que celui devienne complet, et que cette fois son évolution soit la même quelque soit l'instant initial choisi. De même que nous pouvons toujours retrouver l'énergie qui manque (ou savoir d'où provient un éventuel surplus) en considérant un système \og plus grand \fg, nous pouvons parvenir à $\partial_t \mathcal{L} = 0$ si nous incluons davantage de choses à notre système - des corps, des champs... Alors, le système sera suffisamment grand pour que l'énergie soit conservée.
+
+Cette idée est analogue à ce qui se produit pour la quantité de mouvement. Nous savons que la quantité de mouvement d'un système est constante si les interactions en jeu y sont uniquement internes, c'est-à-dire si elles ne dépendent que des positions relatives des différents constituants du système. Encore une fois, nous pouvons comprendre le lien avec l'invariance associée à cette conservation. Si nous reproduisons une expérience en déplaçant l'ensemble du système dans l'univers, et que nous trouvons le même résultat, c'est-à-dire que le système évolue pareillement indépendamment de l'endroit où nous l'avons placé, alors les interactions ne dépendent que des positions relatives des éléments du système. Si ce n'était pas le cas, alors nous pourrions compléter le système par les éléments extérieurs qui agissent sur sa dépendance spatial, jusqu'à ce qu'il y ait invariance par translation.
+
+\section{Référentiels non galiléens}
+
+On chercher à établir les équations du mouvement dans un référentiel non galiléen $\mathcal{R}'$ de repère orthonormé $(O', \vec{e_1}', \vec{e_2}', \vec{e_3}')$. Pour cela, on se donne un référentiel inertiel $\mathcal{R}$ de repère orthonormé $(O, \vec{e_1}, \vec{e_2}, \vec{e_3})$ dans lequel nous connaissons bien ces équations puisqu'elles sont données par les lois de Newton. On étudie le mouvement d'un corps de masse $m$ situé en $M$ de coordonnées $(x_1, x_2, x_3)$ dans $\mathcal{R}$ et $(x'_1, x'_2, x'_3)$ dans $\mathcal{R}'$. On suppose de plus que $\vec{v}_{\mathcal{R'}/\mathcal{R}} =  \dd \vv{OO'} /\dd t = \sum_{i = 1}^{3} u_i \vec{e_i}$.
+
+Nous savons alors que :
+
+\begin{equation}
+m \vec{a}_\mathcal{R}= m \dfrac{\dd^2 \vv{OM}}{\dd t^2} = \vec{F}
+\end{equation}
+
+De là :
+
+\begin{equation}
+\dfrac{\dd^2\vv{OO'}}{\dd  t} + \dfrac{\dd^2\vv{O'M}}{\dd  t} = \dfrac{\dd \vec{v}_{\mathcal{R'}/\mathcal{R}} }{\dd t} + \dfrac{\dd^2\vv{O'M}}{\dd  t} = \vec{F}/m
+\end{equation}
+
+Il reste à expliciter le second terme. Pour cela, on commence par calcule la dérivée du vecteur $\vv{O'M}$ :
+
+\begin{equation}
+\dfrac{\dd \vv{O'M}}{\dd t} = \sum_{i = 1}^{3} \dfrac{\dd x'_i}{\dd t} \vec{e_i}' + \sum_{i = 1}^{3} x'_i \dfrac{\dd \vec{e_i}'}{\dd t}
+\end{equation}
+
+Cette équation peut être dérivée une nouvelle fois :
+
+\begin{equation}
+\dfrac{\dd^2 \vv{O'M}}{\dd t^2} = \sum_{i = 1}^{3} \dfrac{\dd^2 x'_i}{\dd t^2} \vec{e_i}' + 2 \sum_{i = 1}^{3} \dfrac{\dd x'_i}{\dd t}  \dfrac{\dd \vec{e_i}'}{\dd t} +  \sum_{i = 1}^{3} x'_i \dfrac{\dd^2 \vec{e_i}'}{\dd t^2}
+\end{equation}
+
+Mais puisque $\vec{v}_\mathcal{R'} = (v'_1, v'_2, v'_3) = (\dot{x_1}', \dot{x_2}', \dot{x_3}')$ et $\vec{a}_\mathcal{R'} = (a'_1, a'_2, a'_3) = (\ddot{x_1}', \ddot{x_2}', \ddot{x_3}')$, alors :
+
+\begin{equation}
+\vec{a}_\mathcal{R} = \vec{a}_{\mathcal{R'}/\mathcal{R}}  + \vec{a}_\mathcal{R'}  + 2 \sum_{i = 1}^{3} v'_i \dfrac{\dd \vec{e_i}'}{\dd t} +  \sum_{i = 1}^{3} x'_i \dfrac{\dd^2 \vec{e_i}'}{\dd t^2}
+\end{equation}
+
+La transformation qui lie $\vec{e_i}'(t)$ à $\vec{e_i}'(t+dt)$ doit préserver la norme et l'orientation : c'est une rotation. On peut donc trouver un vecteur $\vec{\omega}$ fonction du temps tel que : 
+
+\begin{equation}
+\dfrac{\dd \vec{e_i}'}{\dd t} = \vec{\omega} \wedge \vec{e_i}'
+\end{equation}
+
+On trouve donc, en réinjectant dans la relation précédente :
+
+\begin{equation}
+\vec{a}_\mathcal{R} = \vec{a}_{\mathcal{R'}/\mathcal{R}}  + \vec{a}_\mathcal{R'}  + 2 \vec{\omega} \wedge \vec{v}_\mathcal{R'} + \dfrac{\dd \vec{\omega}}{\dd t}\wedge \vv{O'M} + \vec{\omega} \wedge \left ( \vec{\omega} \wedge \vv{O'M} \right )
+\end{equation}
+
+On en déduit la forme de la seconde loi de Newton :
+
+\begin{equation}
+m \left [ \vec{a}_\mathcal{R'}  + \vec{a}_{\mathcal{R'}/\mathcal{R}}  + 2 \vec{\omega} \wedge \vec{v}_\mathcal{R'} + \dfrac{\dd \vec{\omega}}{\dd t}\wedge \vv{O'M} + \vec{\omega} \wedge \left ( \vec{\omega} \wedge \vv{O'M} \right ) \right ] = \vec{F}
+\end{equation}
+
+Si $\mathcal{R}'$ était galiléen, seul le premier terme du membre de gauche apparaîtrait. Au lieu de cela, l'accélération doit être corrigée d'un certain nombre de termes.
+
+ Le second terme est l'accélération de $\mathcal{R}'$ dans $\mathcal{R}$. Si $\mathcal{R}'$ est défini par la position d'une masse, alors cette accélération est simplement donnée par la seconde loi de Newton et la somme des forces appliquées à cette masse.
+
+Le troisième terme est l'accélération de Coriolis.  

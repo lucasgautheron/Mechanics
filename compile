@@ -1,0 +1,5 @@
+cd latex
+pdflatex main.tex
+pdflatex main.tex
+cd ..
+mv latex/main.pdf book.pdf
