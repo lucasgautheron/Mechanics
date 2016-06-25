@@ -5,7 +5,7 @@ cache: apt
 addons:
   apt:
     packages:
-    - texlive-latex-extra
+    - texlive-full
 
 before_install:
  - chmod +x compile
